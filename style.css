@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.welcomeModal{
+    top: 35%;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bgDD.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.dino{
+    background-image: url(marioDDicon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 114px;
+    position: absolute;
+    bottom: 35px;
+    left: 52px;
+}
+
+.obstacle{
+    width: 120px;
+    height: 95px;
+    background-image: url(dragon.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 40px;
+    left: 44vw;
+}
+
+.animateDino{
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameoverDino{
+    animation: gameoverAni 0.6s linear;
+}
+
+
+.gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#welcomeMessage{
+    font-size: 25px;
+    color: #54212f;
+    font-weight: bold;
+    position:absolute;
+    top:10px;
+    right: 45px;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+#scoreCont{
+    background-color:#42cc8c;
+    font-size: 25px;
+    color: #000000;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 100px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family:'Roboto',sans-serif;
+    border-radius: 10px;
+}
+
+#liveCont{
+    font-size: 25px;
+    color: #000000;
+    font-weight: bold;
+    position: fixed;
+    right: 45px;
+    top: 42px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+#level{
+    background-color:#42cc8c;
+    font-size: 25px;
+    color: #000000;
+    font-weight: bold;
+    position: absolute;
+    left: 45px;
+    top: 100px;
+    border: 2px solid black;
+    padding: 2px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+}
+
+.bouncy{
+     animation:bouncy 5s infinite linear;
+     position:relative;
+}
+
+@keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes gameoverAni{
+    0%{
+        bottom: 0;
+    }
+    25%{
+        bottom: 150px;
+    }
+    50%{
+        bottom: 500px;
+    }
+    75%{
+        bottom: 0; 
+    }
+    100%{
+        bottom: -150px; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
